@@ -23,14 +23,7 @@ async def post_init(application: Application) -> None:
     logging.info("Webhook deleted successfully.")
 
 # Custom error handler function
-async def error_handler(update: Update, context: CallbackContext) -> None:
-    """Log the error and send a message to the user."""
-    logging.error(f"An error occurred: {context.error}")
-    if update.effective_chat:
-        await context.bot.send_message(
-            chat_id=update.effective_chat.id, 
-            text="An error occurred. Please try again later."
-        )
+
 
 # Menu items
 menu_items = {
