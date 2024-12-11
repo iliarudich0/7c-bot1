@@ -140,5 +140,4 @@ if __name__ == "__main__":
     try:
         # Run polling to keep the bot running, clear pending updates to avoid conflict
         application.run_polling(drop_pending_updates=True)
-    except Exception as e:
-        logging.error(f"Error while running the bot: {e}")
+    
